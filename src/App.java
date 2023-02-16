@@ -1,16 +1,22 @@
 public class App {
     public static void main(String[] args) {
-        Author SteveMcConnell = new Author("Steve", "McConnell");
-        Book СodeComplete = new Book(SteveMcConnell, "СodeComplete", 1993);
-        System.out.println("СodeComplete.bookName = " + СodeComplete.getBookName());
-        System.out.println("СodeComplete.authorName = " + СodeComplete.getAuthorName().getFirstNameAuthor()+СodeComplete.getAuthorName().getSurnameAuthor());
-        System.out.println("СodeComplete.yearPublicationBook = " + СodeComplete.yearPublicationBook);
-        СodeComplete.setYearPublicationBook(2023);
-        System.out.println("СleanCode.yearPublicationBook = " + СodeComplete.yearPublicationBook);
-        Author RobertMartin  = new Author("Robert", "Martin");
-        Book СleanCode = new Book(RobertMartin, "СleanCode", 2008);
-        System.out.println("СleanCode.bookName = " + СleanCode.getBookName());
-        System.out.println("СleanCode.authorName = " + СleanCode.getAuthorName().getFirstNameAuthor()+СleanCode.getAuthorName().getSurnameAuthor());
-        System.out.println("СleanCode.yearPublicationBook = " + СleanCode.yearPublicationBook);
+        Author steveMcConnell = new Author("Steve", "McConnell");
+        Book codeComplete = new Book(steveMcConnell, "codeComplete", 1993);
+        Book codeComplete2 = new Book(steveMcConnell, "codeComplete", 1993);
+        System.out.println("codeComplete.bookName = " + codeComplete.getBookName());
+        System.out.println("codeComplete.authorName = " + codeComplete.getAuthorName().getFirstNameAuthor()+codeComplete.getAuthorName().getSurnameAuthor());
+        System.out.println("codeComplete.yearPublicationBook = " + codeComplete.yearPublicationBook);
+        codeComplete.setYearPublicationBook(2023);
+        System.out.println("cleanCode.yearPublicationBook = " + codeComplete.yearPublicationBook);
+        Author robertMartin  = new Author("Robert", "Martin");
+        Book cleanCode = new Book(robertMartin, "cleanCode", 2008);
+        System.out.println("cleanCode.bookName = " + cleanCode.getBookName());
+        System.out.println("cleanCode.authorName = " + cleanCode.getAuthorName().getFirstNameAuthor()+cleanCode.getAuthorName().getSurnameAuthor());
+        System.out.println("cleanCode.yearPublicationBook = " + cleanCode.yearPublicationBook);
+        System.out.println(cleanCode);
+        System.out.println(cleanCode.equals(codeComplete));
+        System.out.println(cleanCode.equals(cleanCode));
+        System.out.println(codeComplete.equals(codeComplete2));
+
     }
 }

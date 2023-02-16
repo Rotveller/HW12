@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Author {
     String firstNameAuthor;
     String surnameAuthor;
@@ -8,12 +10,32 @@ public class Author {
     }
 
     public String getFirstNameAuthor() {
-        return this.firstNameAuthor;
+        return firstNameAuthor;
     }
     public String getSurnameAuthor() {
-        return this.surnameAuthor;
+        return surnameAuthor;
     }
 
+    @Override
+    public String toString() {
+        return "Author{" +
+                "firstNameAuthor='" + firstNameAuthor + '\'' +
+                ", surnameAuthor='" + surnameAuthor + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return Objects.equals(firstNameAuthor, author.firstNameAuthor) && Objects.equals(surnameAuthor, author.surnameAuthor);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstNameAuthor, surnameAuthor);
+    }
     /*Создайте класс Author, который содержит в себе данные об имени и фамилии автора.
     Напишите конструкторы для обоих классов, заполняющие все поля.
     Создайте геттеры для всех полей автора и всех полей книги.
