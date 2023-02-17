@@ -1,8 +1,8 @@
 import java.util.Objects;
 
 public class Author {
-    String firstNameAuthor;
-    String surnameAuthor;
+   private final String firstNameAuthor;
+    private final String surnameAuthor;
 
     public Author(String firstNameAuthor, String surnameAuthor) {
         this.firstNameAuthor=firstNameAuthor;
