@@ -4,14 +4,14 @@ public class App {
         Book codeComplete = new Book(steveMcConnell, "codeComplete", 1993);
         Book codeComplete2 = new Book(steveMcConnell, "codeComplete", 1993);
         System.out.println("codeComplete.bookName = " + codeComplete.getBookName());
-        System.out.println("codeComplete.authorName = " + codeComplete.getAuthorName().getFirstNameAuthor()+codeComplete.getAuthorName().getSurnameAuthor());
+        System.out.println("codeComplete.authorName = " + codeComplete.getAuthorName().getFirstNameAuthor() + codeComplete.getAuthorName().getSurnameAuthor());
         System.out.println("codeComplete.yearPublicationBook = " + codeComplete.yearPublicationBook);
         codeComplete.setYearPublicationBook(2023);
         System.out.println("cleanCode.yearPublicationBook = " + codeComplete.yearPublicationBook);
-        Author robertMartin  = new Author("Robert", "Martin");
+        Author robertMartin = new Author("Robert", "Martin");
         Book cleanCode = new Book(robertMartin, "cleanCode", 2008);
         System.out.println("cleanCode.bookName = " + cleanCode.getBookName());
-        System.out.println("cleanCode.authorName = " + cleanCode.getAuthorName().getFirstNameAuthor()+cleanCode.getAuthorName().getSurnameAuthor());
+        System.out.println("cleanCode.authorName = " + cleanCode.getAuthorName().getFirstNameAuthor() + cleanCode.getAuthorName().getSurnameAuthor());
         System.out.println("cleanCode.yearPublicationBook = " + cleanCode.yearPublicationBook);
         System.out.println(cleanCode);
         System.out.println(cleanCode.equals(codeComplete));
